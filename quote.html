@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Request a Quote</title>
+
+<style>
+:root {
+  --bg: #f8f9fa;
+  --card: #ffffff;
+  --accent: #4a90e2;
+  --text: #2d3748;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.container {
+  max-width: 600px;
+  margin: 80px auto;
+  padding: 40px;
+  background: var(--card);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  animation: fadeIn 0.8s ease;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+p {
+  text-align: center;
+  opacity: 0.8;
+  margin-bottom: 30px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 15px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #2d3748;
+}
+
+input:focus, textarea:focus {
+  outline: 1px solid var(--accent);
+}
+
+button {
+  width: 100%;
+  padding: 14px;
+  background: var(--accent);
+  border: none;
+  color: black;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  opacity: 0.85;
+}
+
+@keyframes fadeIn {
+  from {opacity:0; transform: translateY(20px);}
+  to {opacity:1; transform: translateY(0);}
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  <h1>Request a Quote</h1>
+  <p>Tell us about your project — we’ll get back to you shortly.</p>
+
+  <form id="quoteForm" action="confirmation.html" method="get">
+    <input type="text" name="fullName" placeholder="Full Name" required>
+    <input type="email" name="email" placeholder="Email Address" required>
+    <input type="tel" name="phone" placeholder="Phone Number" required>
+    <textarea name="description" rows="5" placeholder="Describe your project..." required></textarea>
+
+    <button type="submit">Submit Request</button>
+  </form>
+</div>
+
+<script>
+document.getElementById("quoteForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  // Redirect to confirmation page
+  window.location.href = "confirmation.html";
+});
+</script>
+
+</body>
+</html>

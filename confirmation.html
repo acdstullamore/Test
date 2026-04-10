@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Thank You</title>
+
+<style>
+:root {
+  --bg: #f8f9fa;
+  --accent: #4a90e2;
+  --text: #2d3748;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.box {
+  text-align: center;
+  max-width: 500px;
+  animation: fadeIn 0.8s ease;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+p {
+  opacity: 0.8;
+  margin-bottom: 30px;
+}
+
+a {
+  padding: 12px 25px;
+  background: var(--accent);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+a:hover {
+  opacity: 0.85;
+}
+
+@keyframes fadeIn {
+  from {opacity:0; transform: translateY(20px);}
+  to {opacity:1; transform: translateY(0);}
+}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+  <h1>Thank You</h1>
+  <p>Your quote request has been received.  
+  We’ll be in touch shortly to discuss your project.</p>
+
+  <a href="index.html">Return Home</a>
+</div>
+
+</body>
+</html>
